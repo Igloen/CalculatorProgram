@@ -28,6 +28,15 @@ namespace Calculate.Test
             // Assert
             Assert.That(result, Is.EqualTo(7));
         }
+        
+        [TestCase(2, 5)]
+        public void Add_Two_Numbers_new()
+        {
+           double result = uut.Add(4, 8);
+
+           Assert.That(result,Is.EqualTo(12));
+        }
+
 
         [Test]
         public void Subtract_Two_Numbers()
@@ -78,6 +87,7 @@ namespace Calculate.Test
             Assert.That(result, Is.EqualTo(-6));
         }
 
+        
 
     }
 }
