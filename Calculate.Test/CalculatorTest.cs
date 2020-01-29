@@ -66,5 +66,18 @@ namespace Calculate.Test
             // Act + Assert
             Assert.That(uut.Power(v1, v2), Is.EqualTo(result));
         }
+
+
+        [TestCase(-2, -3)]
+        public void Power_TwoNegative_Numbers_2(double v1, double v2)
+        {
+            // Act 
+            double result = uut.Power(v1, v2);
+
+            // Assert
+            Assert.That(result, Is.EqualTo(-6));
+        }
+
+
     }
 }
