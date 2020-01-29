@@ -58,14 +58,12 @@ namespace Calculate.Test
             Assert.That(result, Is.EqualTo(4));
         }
 
-        [TestCase(2,3)]
-        public void Power_Two_Numbers_2(double v1, double v2)
+        [TestCase(2,3, 8)]
+        [TestCase(3,2,9)]
+        public void Power_Two_Numbers_2(double v1, double v2, double result)
         {
-            // Act 
-            double result = uut.Power(v1, v2);
-
-            // Assert
-            Assert.That(result, Is.EqualTo(8));
+            // Act + Assert
+            Assert.That(uut.Power(v1, v2), Is.EqualTo(result));
         }
     }
 }
