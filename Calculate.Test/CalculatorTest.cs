@@ -60,6 +60,7 @@ namespace Calculate.Test
 
         [TestCase(2,3, 8)]
         [TestCase(3,2,9)]
+        [TestCase(4, 2, 16)]
         public void Power_Two_Numbers_2(double v1, double v2, double result)
         {
             // Act + Assert
