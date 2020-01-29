@@ -15,6 +15,7 @@ namespace CalculatorProgram
             Console.WriteLine(calculator.Subtract(2,4));
             Console.WriteLine(calculator.Multiply(2,4));
             Console.WriteLine(calculator.Power(2,4));
+            Console.WriteLine(calculator.Add(3,6));
 
             Console.WriteLine("Employee of the month: Kristian");
 
