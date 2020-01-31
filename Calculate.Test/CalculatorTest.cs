@@ -73,6 +73,16 @@ namespace Calculate.Test
             Assert.Throws<DivideByZeroException>(() => uut.Divide(3,0));
         }
 
+        [Test]
+        public void Test_Accumulator()
+        {
+            // Act
+            double result = uut.Add(2, 5) + uut.Multiply(2, 5);
+
+            // Assert
+            Assert.That(result, Is.EqualTo(17));
+        }
+
         
 
     }

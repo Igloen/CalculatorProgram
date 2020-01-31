@@ -15,6 +15,7 @@ namespace CalculatorProgram
             Console.WriteLine(calculator.Subtract(2,4));
             Console.WriteLine(calculator.Multiply(2,4));
             Console.WriteLine(calculator.Power(2,4));
+            Console.WriteLine("Kumuleret sum: "+calculator.Accumulator);
 
             // Try-catch sørger for, at programmet ikke lukker når der divideres med 0. 
             try
