@@ -31,5 +31,15 @@ namespace CalculatorProgram
             double sum = Math.Pow(x, exp);
             return sum;
         }
+
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor == 0)
+            {
+                throw new DivideByZeroException();
+            }
+            double sum = dividend / divisor;
+            return sum;
+        }
     }
 }

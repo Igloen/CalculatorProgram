@@ -15,10 +15,18 @@ namespace CalculatorProgram
             Console.WriteLine(calculator.Subtract(2,4));
             Console.WriteLine(calculator.Multiply(2,4));
             Console.WriteLine(calculator.Power(2,4));
-            Console.WriteLine(calculator.Add(3,6));
 
-            Console.WriteLine("Employee of the month: Kristian");
+            // Try-catch sørger for, at programmet ikke lukker når der divideres med 0. 
+            try
+            {
+                Console.WriteLine(calculator.Divide(6,0));
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("No result - Attempted to divide by 0.");
+            }
 
+            
             Console.ReadKey();
         }
     }

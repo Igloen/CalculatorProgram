@@ -28,15 +28,6 @@ namespace Calculate.Test
             // Assert
             Assert.That(result, Is.EqualTo(7));
         }
-        
-        [TestCase(2, 5)]
-        public void Add_Two_Numbers_new()
-        {
-           double result = uut.Add(4, 8);
-
-           Assert.That(result,Is.EqualTo(12));
-        }
-
 
         [Test]
         public void Subtract_Two_Numbers()
@@ -76,15 +67,10 @@ namespace Calculate.Test
             Assert.That(uut.Power(v1, v2), Is.EqualTo(result));
         }
 
-
-        [TestCase(-2, -3)]
-        public void Power_TwoNegative_Numbers_2(double v1, double v2)
+        [Test]
+        public void Test_DivideByZero_ThrowException()
         {
-            // Act 
-            double result = uut.Power(v1, v2);
-
-            // Assert
-            Assert.That(result, Is.EqualTo(-6));
+            Assert.Throws<DivideByZeroException>(() => uut.Divide(3,0));
         }
 
         
