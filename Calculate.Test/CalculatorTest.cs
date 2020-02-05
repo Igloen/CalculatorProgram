@@ -65,6 +65,15 @@ namespace Calculate.Test
 
         //********************** Divide-Method *****************************
 
+        [TestCase(10, 5, 2)]
+        [TestCase(5, 2, 2.5)]
+        [TestCase(18, 3, 6)]
+        public void Divide_Two_Numbers(double v1, double v2, double result)
+        {
+            // Act + Assert
+            Assert.That(uut.Divide(v1, v2), Is.EqualTo(result));
+        }
+
         [Test]
         public void Test_DivideByZero_ThrowException()
         {
@@ -81,6 +90,18 @@ namespace Calculate.Test
 
             // Assert
             Assert.That(result, Is.EqualTo(17));
+        }
+
+        //********************** Clear-Method *****************************
+
+        [Test]
+        public void Test_Clear_Method()
+        {
+            // Act
+            uut.Clear();
+
+            // Assert
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
         }
 
     }
