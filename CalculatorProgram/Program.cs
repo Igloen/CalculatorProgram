@@ -27,7 +27,8 @@ namespace CalculatorProgram
                 Console.WriteLine("No result - Attempted to divide by 0.");
             }
 
-            
+            Console.WriteLine("Hej");
+
             Console.ReadKey();
         }
     }
