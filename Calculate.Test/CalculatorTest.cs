@@ -19,59 +19,59 @@ namespace Calculate.Test
             uut = new Calculator();
         }
 
-        [Test]
-        public void Add_Two_Numbers()
-        {
-            // Act 
-            double result = uut.Add(2, 5);
+        //********************** Add-Method *****************************
 
-            // Assert
-            Assert.That(result, Is.EqualTo(7));
+        [TestCase(2, 3, 5)]
+        [TestCase(22, 2, 24)]
+        [TestCase(4, 23, 27)]
+        public void Add_Two_Numbers(double v1, double v2, double result)
+        {
+            // Act + Assert
+            Assert.That(uut.Add(v1, v2), Is.EqualTo(result));
         }
 
-        [Test]
-        public void Subtract_Two_Numbers()
-        {
-            // Act 
-            double result = uut.Subtract(2, 5);
+        //********************** Subtract-Method *****************************
 
-            // Assert
-            Assert.That(result, Is.EqualTo(-3));
-        }
-        [Test]
-        public void Multiply_Two_Numbers()
+        [TestCase(5, 3, 2)]
+        [TestCase(8, 2, 6)]
+        [TestCase(22, 2, 20)]
+        public void Subtract_Two_Numbers(double v1, double v2, double result)
         {
-            // Act 
-            double result = uut.Multiply(2, 5);
-
-            // Assert
-            Assert.That(result, Is.EqualTo(10));
+            // Act + Assert
+            Assert.That(uut.Subtract(v1, v2), Is.EqualTo(result));
         }
 
-        [Test]
-        public void Power_Two_Numbers()
-        {
-            // Act 
-            double result = uut.Power(2, 2);
+        //********************** Multiply-Method *****************************
 
-            // Assert
-            Assert.That(result, Is.EqualTo(4));
+        [TestCase(2, 3, 6)]
+        [TestCase(3, 4, 12)]
+        [TestCase(4, 6, 24)]
+        public void Multiply_Two_Numbers(double v1, double v2, double result)
+        {
+            // Act + Assert
+            Assert.That(uut.Multiply(v1, v2), Is.EqualTo(result));
         }
 
-        [TestCase(2,3, 8)]
-        [TestCase(3,2,9)]
+        //********************** Power-Method *****************************
+
+        [TestCase(2, 3, 8)]
+        [TestCase(3, 2, 9)]
         [TestCase(4, 2, 16)]
-        public void Power_Two_Numbers_2(double v1, double v2, double result)
+        public void Power_Two_Numbers(double v1, double v2, double result)
         {
             // Act + Assert
             Assert.That(uut.Power(v1, v2), Is.EqualTo(result));
         }
 
+        //********************** Divide-Method *****************************
+
         [Test]
         public void Test_DivideByZero_ThrowException()
         {
-            Assert.Throws<DivideByZeroException>(() => uut.Divide(3,0));
+            Assert.Throws<DivideByZeroException>(() => uut.Divide(3, 0));
         }
+
+        //********************** Accumulator *****************************
 
         [Test]
         public void Test_Accumulator()
@@ -83,7 +83,7 @@ namespace Calculate.Test
             Assert.That(result, Is.EqualTo(17));
         }
 
-        
-
     }
+
 }
+
