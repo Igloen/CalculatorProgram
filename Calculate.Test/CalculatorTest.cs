@@ -135,7 +135,7 @@ namespace Calculate.Test
             // Act + Assert
             uut.Add(v1, v2);
 
-            double testValue = uut.SubtractFromAcumulator(v2);
+            double testValue = uut.SubtractFromAcumulator(v3);
 
             Assert.That(testValue, Is.EqualTo(result));
         }
